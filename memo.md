@@ -46,3 +46,22 @@
 # TextInput 은 항상 문자열을 반환합니다.
 
 > <TextInput keyboardType="number-pad"> 여도 결과값은 문자열로 반환됩니다.
+
+# Alert 사용하기
+
+1. Import {Alert} from 'react-native';
+
+- 경고창을 표시하는 컴포넌트가 아니라 alert 메소드를 사용합니다.
+
+2. Alert.alert or Alert.prompt 를 입력할 수 있습니다.
+
+3. 세개의 인수를 받으며, 첫번째는 제목, 두번째는 내용, 세번째는 버튼을 배열로 받습니다.
+
+4. Alert.alert('제목', '내용', [{text: '버튼이름', style: '' ,onPress: () => console.log('버튼을 눌렀을 때 실행할 함수')}])
+
+5. button 객체안에서 모든 text 를 가지고 있습니다.
+
+- style default, cancel, destructive를 가질 수 있습니다. 기본,취소,삭제 버튼을 의미합니다.
+- 스타일에 따라 버튼의 색상이 굵기가 달라집니다.
+
+6.
