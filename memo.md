@@ -38,3 +38,11 @@
 # 번외 npm install -g expo-cli 가 사용되지 않는다 합니다.
 
 # ImageBackground 사용하기
+
+# react-native 에서 useState 사용하기
+
+>
+
+# TextInput 은 항상 문자열을 반환합니다.
+
+> <TextInput keyboardType="number-pad"> 여도 결과값은 문자열로 반환됩니다.
