@@ -1,10 +1,10 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 
-const PrimaryButton = () => {
+const PrimaryButton = ({ children }) => {
   return (
     <View>
-      <Text>PrimaryButton</Text>
+      <Text>{children}</Text>
     </View>
   );
 };
