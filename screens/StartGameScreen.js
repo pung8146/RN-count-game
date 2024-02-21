@@ -12,8 +12,14 @@ const StartGameScreen = () => {
         autoCapitalize="none"
         autoCorrect={false}
       />
-      <PrimaryButton>Reset</PrimaryButton>
-      <PrimaryButton>Confrim</PrimaryButton>
+      <View style={styles.buttonsContainer}>
+        <View style={styles.buttonContainer}>
+          <PrimaryButton style={{ flex: 1 }}>Reset</PrimaryButton>
+        </View>
+        <View style={styles.buttonContainer}>
+          <PrimaryButton style={{ flex: 1 }}>Confrim</PrimaryButton>
+        </View>
+      </View>
     </View>
   );
 };
@@ -27,8 +33,8 @@ const styles = StyleSheet.create({
     marginTop: 100,
     marginHorizontal: 24,
     backgroundColor: "#4e0329",
-    // alignItems: "center",
-    // justifyContent: "center",
+    justifyContent: "center",
+    alignItems: "center",
     borderRadius: 8,
     elevation: 10,
     shadowColor: "black",
@@ -46,5 +52,11 @@ const styles = StyleSheet.create({
     marginVertical: 8,
     fontWeight: "bold",
     textAlign: "center",
+  },
+  buttonsContainer: {
+    flexDirection: "row",
+  },
+  buttonContainer: {
+    flex: 1,
   },
 });
