@@ -3,12 +3,23 @@ import React from "react";
 
 const GameScreen = () => {
   return (
-    <View>
-      <Text>GameScreen</Text>
+    <View style={styles.screen}>
+      <Text>Oppoent's Guess</Text>
+      {/* GUESS */}
+      <View>
+        <Text>Higher or lower?</Text>
+        {/* + - */}
+      </View>
+      <View>{/* LOG ROUNDS */}</View>
     </View>
   );
 };
 
 export default GameScreen;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  screen: {
+    flex: 1,
+    padding: 24,
+  },
+});

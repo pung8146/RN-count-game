@@ -64,4 +64,6 @@
 - style default, cancel, destructive를 가질 수 있습니다. 기본,취소,삭제 버튼을 의미합니다.
 - 스타일에 따라 버튼의 색상이 굵기가 달라집니다.
 
-6.
+# SafeAreaView 사용하기
+
+> SafeAreaView는 ios에서 notch영역을 피하기 위해 사용됩니다.
