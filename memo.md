@@ -67,3 +67,19 @@
 # SafeAreaView 사용하기
 
 > SafeAreaView는 ios에서 notch영역을 피하기 위해 사용됩니다.
+
+# expo-font 사용하기
+
+1. expo install expo-font
+
+```jsx
+import { useFonts } from "expo-font";
+```
+
+# expo-app-loading 사용하기
+
+1. npm install expo-app-loading
+
+```jsx
+import AppLoading from "expo-app-loading";
+```
