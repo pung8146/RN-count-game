@@ -83,3 +83,16 @@ import { useFonts } from "expo-font";
 ```jsx
 import AppLoading from "expo-app-loading";
 ```
+
+# expo-splash-screen 사용하기
+
+> expo-app-loading 대신 사용할 수 있습니다.
+
+# Dimensions API 사용하기
+
+> 기기의 너비와 높이를 가져올 수 있습니다.
+
+1. import { Dimensions } from "react-native"; 네이티브에서 불러옵니다.
+2. const 변수명 = Dimensions.get("window or screen") => get 메서드가 문자열 타입 인수로서 화면이나 윈도우의 치수를 가져옵니다.
+3. 안드로이드에서 screen은 상태 표시줄을 포함한 너비와 높이를 가져옵니다. window는 상태 표시줄을 제외한 너비와 높이를 가져옵니다.
+4. const 변수명 = Dimensions.get("window").width => .width .height로 너비와 높이를 가져올 수 있습니다.
