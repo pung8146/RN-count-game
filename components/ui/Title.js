@@ -14,11 +14,12 @@ const styles = StyleSheet.create({
   title: {
     fontFamily: "open-sans-bold",
     // fontWeight: "bold",
-    fontSize: 18,
+    fontSize: 24,
     color: "white",
     textAlign: "center",
     borderWidth: 2,
     borderColor: "white",
     padding: 12,
+    maxWidth: "80%",
   },
 });

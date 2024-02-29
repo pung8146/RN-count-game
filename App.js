@@ -1,44 +1,28 @@
-import React, { useState, useEffect } from "react"; // useEffect 추가
+import { useState } from "react";
 import { StyleSheet, ImageBackground, SafeAreaView } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-import * as SplashScreen from "expo-splash-screen"; // SplashScreen 임포트 추가
-import * as Font from "expo-font"; // Font 임포트 추가
+import { useFonts } from "expo-font";
 import AppLoading from "expo-app-loading";
-
 // Components
 import StartGameScreen from "./screens/StartGameScreen";
 import GameScreen from "./screens/GameScreen";
 import GameOverScreen from "./screens/GameOverScreen";
 import Colors from "./constants/colors";
-
-async function loadFonts() {
-  await Font.loadAsync({
-    "open-sans": require("./assets/fonts/OpenSans-Regular.ttf"),
-    "open-sans-bold": require("./assets/fonts/OpenSans-Bold.ttf"),
-  });
-}
 export default function App() {
   const [userNumber, setUserNumber] = useState();
   const [gameIsOver, setGameIsOver] = useState(true);
   const [guessRounds, setGuessRounds] = useState(0);
 
-  useEffect(() => {
-    async function prepare() {
-      try {
-        // 스플래시 화면 유지
-        await SplashScreen.preventAutoHideAsync();
-        // 폰트 로딩
-        await loadFonts();
-      } catch (e) {
-        console.warn(e);
-      } finally {
-        // 로딩이 완료되면 스플래시 화면 숨기기
-        await SplashScreen.hideAsync();
-      }
-    }
-
-    prepare();
-  }, []);
+  // fonts
+  const [fontsLoaded] = useFonts({
+    // useFonts 배열은 첫 번째 요소로 폰트 로딩이 완료되었는지 여부를 나타내는 boolean 값을 반환합니다.
+    "open-sans": require("./assets/fonts/OpenSans-Regular.ttf"),
+    "open-sans-bold": require("./assets/fonts/OpenSans-Bold.ttf"),
+  });
+  // 폰트 로딩이 완료되지 않았다면 AppLoading 컴포넌트를 반환합니다.
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  }
 
   function pickedNumberHandler(pickedNumber) {
     setUserNumber(pickedNumber);
