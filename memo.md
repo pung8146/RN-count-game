@@ -96,3 +96,7 @@ import AppLoading from "expo-app-loading";
 2. const 변수명 = Dimensions.get("window or screen") => get 메서드가 문자열 타입 인수로서 화면이나 윈도우의 치수를 가져옵니다.
 3. 안드로이드에서 screen은 상태 표시줄을 포함한 너비와 높이를 가져옵니다. window는 상태 표시줄을 제외한 너비와 높이를 가져옵니다.
 4. const 변수명 = Dimensions.get("window").width => .width .height로 너비와 높이를 가져올 수 있습니다.
+
+# 화면 회전
+
+> Expo는 기본적으로 orientation을 portrait로 설정되어 있습니다.(세로고정), landscape로 설정하면 가로고정이 됩니다. default는 기기의 설정에 따라서 화면이 회전됩니다. 이 설정은 app.json에서 설정할 수 있습니다.
