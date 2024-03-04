@@ -100,3 +100,21 @@ import AppLoading from "expo-app-loading";
 # 화면 회전
 
 > Expo는 기본적으로 orientation을 portrait로 설정되어 있습니다.(세로고정), landscape로 설정하면 가로고정이 됩니다. default는 기기의 설정에 따라서 화면이 회전됩니다. 이 설정은 app.json에서 설정할 수 있습니다.
+
+# 화면 회전과 Demensions
+
+> 앱사용중 화면 회전을 사용한다면 Dimensions API 원하지 않는 값에 고정 될 수 있습니다.
+
+> 기기의 방향이나 크기가 변경 될때 반응해야 되는 코드는 모두 컴포넌트 함수에 위치시킵니다. 이 함수는 전체 파일 코드와 달리 여러번 실행되기 때문입니다.
+
+# useWindowDimensions 사용하기
+
+> react-native 에서 useWindowDimensions (Hook)을 제공합니다.
+
+> 이 hook 호출 만해도 객체를 가져옵니다.
+
+```jsx
+import { useWindowDimensions } from "react-native";
+
+const { width, height } = useWindowDimensions(); // 객체 구조 분해 할당사용
+```
